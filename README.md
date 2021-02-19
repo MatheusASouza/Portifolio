@@ -1,4 +1,4 @@
-# Portifolio
+# Portfolio
 
  Repositório destinado ao portifólio!
 
