@@ -27,25 +27,25 @@ header{
     object-fit: cover;
     opacity: 0.5;
     animation: zoom 10s;
-
-
 }
+
 
 .banner{
     position: absolute;
-    top: 30%;
-    left: 15%;
+    top: 50%;
+    left: 5%;
     align-items: center;
 
 }
 
 @keyframes moveBanner{
     0%{
-    transform: translateY(10rem) rotateY(-50deg);
-    }
-    10%{
-        transform: translateY(0m) rotateY(0);
+        transform: translate(15rem);
         opacity: 0;
+    }
+    100%{
+        transform: translate(0);
+        opacity: 1;
     }
 }
 .banner h1{
@@ -73,27 +73,65 @@ header{
     animation: moveBanner 3.4s;
     
 }
-.banner button{
-    color:aliceblue;
-    font-family:"Baloo Da 2", serif ;
-    font-size: 1.2rem;
-    font-weight: 450;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    background: #c31432;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding: 1rem 3rem;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
+.banner btn-one {
+	color: #FFF;
+    font-family: "Ubuntu", serif;
+    font-size: 1.6rem;
+    font-weight: 200;
+    text-shadow: 0.2rem 0.2rem  rgba(0, 0, 0, 0.4);
+    text-align: center;
+    margin-bottom: 2rem;
+	transition: all 0.3s;
+	position: absolute;
     opacity: 1;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding-left: 1.6rem;
     animation: moveBanner 3.8s;
-
 }
-.banner button:hover{
-    background: #c31432;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.banner btn-one span {
+	transition: all 0.3s;
+    animation: moveBanner 3.8s;
 }
-
+.banner btn-one::before { 
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 12rem;
+	height: 2rem;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.3s;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #cccccc80;
+	border-bottom-color: #cccccc80;
+	transform: scale(0.1, 1);
+    
+}
+.banner btn-one:hover span {
+	letter-spacing: 2px;
+}
+.banner btn-one:hover::before {
+	opacity: 1;	
+	transform: scale(1, 1);
+}
+.banner btn-one::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 12rem;
+	height: 2rem;
+	z-index: 1;
+	transition: all 0.3s;
+	background-color: #80808080;
+    border-radius: 0.4rem;
+}
+.banner btn-one:hover::after {
+	opacity: 0;	
+	transform: scale(0.1, 1);
+}
