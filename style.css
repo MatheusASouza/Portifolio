@@ -10,11 +10,14 @@
 
 }
 .hamburger{
-    width: 2rem;
-    height: 2rem;
+    background-color: #fff;
+    font-size: 3rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
     position: fixed;
     z-index: 100;
-    right: 2rem;
+    right: 1.8rem;
     top: 3rem;
     display: flex;
     flex-direction: column;
@@ -23,10 +26,12 @@
 }
 
 .line{
-    width: 100%;
+    width: 50%;
     height: .1rem;
-    background-color: #FFF;
-    box-shadow: 0.1rem 0.1rem 1px;
+    left: 5px;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+   
 }
 header{
     position: absolute;
@@ -157,7 +162,7 @@ header{
 .sidebar{
     width: 20rem;
     height: 100vh;
-    background-color: rgb(77, 77, 77);
+    background-color: rgba(46, 56, 102, 0.548);
     position: fixed;
     top: 0;
     right: 0;
@@ -170,21 +175,30 @@ header{
 
 }
 .menu-item{
+    border: #FFF;
     text-align: center;
     margin-bottom: 1rem;
     
 }
 .menu-link{
-    color: black;
-    font-family: "Ubuntu", serif;
+    border-radius: 10px ;
+    padding: 8px 18px;
+    color: rgba(202, 202, 202, 0.74);
+    display: flex;
+    justify-content: center;
+    font-family: "Josefin Slab", serif;
     text-transform: uppercase;
+    text-align: center;
     font-size: 1.5rem;
-    font-weight: 700;
-    text-shadow: .1rem .1rem rgba(136, 136, 136, 0.335);
+    font-weight: 550;
+    text-shadow: .1rem .1rem rgba(100, 100, 100, 0.335);
     transition: color .5s;
+    transition: background-color 1s;
 }
 .menu-link:hover{
-    color:   rgb(46, 46, 46);
+    color: rgb(46, 56, 102);
+    background-color: rgb(255, 255, 255);
+
 }
 
 .social-midia{
@@ -193,22 +207,32 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    margin: 10px;
+    height: 70px;
+    align-items: center;
+    border: 5px 5px solid #fff;
+    cursor: pointer;
+
 }
 .social-midia i{
-    background-color: rgb(138, 138, 138);
+    background-color: rgba(46, 56, 102, 0);
     color: rgb(255, 255, 255);
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     font-size: 1.5rem;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     display: flex;
     transition: .5s;
-    
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+    border: 5px 5px solid #fff;
 
 }
 .social-midia i:hover{
-    background-color: rgb(105, 105, 105);
+    
+    background-color: rgba(255, 255, 255, 0.835);;
+    color: rgb(46, 56, 102);
 }
-
