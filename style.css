@@ -3,8 +3,8 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
 
 *{
-    text-decoration: none;
     list-style: none;
+    text-decoration: none;
     margin: 0;
     padding: 0;
 
@@ -23,6 +23,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     cursor: pointer;
+    transition: 1.2s;
 }
 .show-menu.hamburguer{
     right: 18rem;
@@ -174,7 +175,6 @@ header{
 }
 .show-menu.sidebar{
     right: 0;
-
 }
 .menu{
     position: absolute;
