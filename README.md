@@ -10,3 +10,5 @@
 - Banner concluído.
 - Criação do menu.
 - Atualizações do menu.
+- Menu concluído.
+- Criação do corpo do site.
