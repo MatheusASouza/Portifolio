@@ -10,7 +10,7 @@
 
 }
 body{
-    background-color: rgb(59, 59, 59);
+    background-color: rgb(68, 68, 68);
 }
 .menu-btm{
     background-color: rgba(230, 230, 230, 0.548);
@@ -279,26 +279,56 @@ header{
 }
 
 .sessao-sobre{
-    background-color: rgb(59, 59, 59);
+    background-color: rgb(68, 68, 68);
     color: #FFF;
     font-family: "Ubuntu", serif;
     font-size: 1.5rem;
     position: relative;
     margin-right: 10rem;
-    margin-left: 10rem;
+    margin-left: 40rem;
     top: 110%;
     bottom: 20%;
+}
+.foto-sobre{
+    margin-left:5% ;
+    margin-top: 5%;
 }
 .sessao-sobre h1{
     text-align: center;
     font-weight: 1000;
+    margin-top: 1.5%;
 }
 .sessao-sobre h2{
     text-align: center;
     font-weight: 200;
-    margin-top: -3.5%;
+    margin-top: 1.5%;
 }
 
+.sessao-conhecimento{
+    background-color: rgb(68, 68, 68);
+    color: #FFF;
+    font-family: "Ubuntu", serif;
+    font-size: 1.5rem;
+    position: relative;
+    margin-right: 40rem;
+    margin-left: 10rem;
+    top: 110%;
+    bottom: 20%;
+}
+.chartdiv{
+    color: #fff;
+}
+.sessao-conhecimento h1{
+    text-align: center;
+    font-weight: 1000;
+    margin-top: 1.5%;
+}
+.sessao-conhecimento h2{
+    text-align:center;
+    font-weight: 200;
+    margin-top: 1.5%;
+    
+}
 .parallax{
     position: relative;
     width: 100%;
@@ -309,6 +339,7 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgb(0, 0, 0);
 }
 .parallax2{
     position: relative;
@@ -320,4 +351,5 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgb(0, 0, 0);
 }

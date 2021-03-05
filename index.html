@@ -10,6 +10,11 @@
     <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    
     <title>Portfólio</title>
 </head>
 <body>
@@ -52,10 +57,14 @@
     </div>
 </aside>
 
+<div class="foto-sobre">
+    <img src="imagens/photo.jpg">
+</div>
+
 <section class="sessao-sobre">
     <div class="sessao-header">
         <h1>Sobre</h1>
-        <h2>_</h2>
+        <h2></h2>
     </div>
         <br> 
     <div class="sobre-text">
@@ -75,28 +84,96 @@
 </div>
     
 
+<section class="sessao-conhecimento">
+    <div class="sessao-header">
+        <h1>Conhecimento</h1>
+        <h2></h2>
+    </div>
+        <br> 
+    <div class="conhecimento-text">
+        <li>Programação web front-end, utilizando ferramentas como HTML, CSS e JavaScript.</li> <br>
+        <li>Habilidades básicas de web design com ferramentas como Corel Draw e Adobe Illustrator.</li> <br>
+        <li>Banco de dados SQL utilizando MySQL e SQL Server.</li> <br>
+        <li>Aplicações em C e JAVA.</li> <br>
+        <li>Aplicações em Python.</li> <br>
+        <br><br>
+    </div>
+</section>
 
-    <section class="sessao-sobre">
-        <div class="sessao-header">
-            <h1>Conhecimento</h1>
-            <h2>_</h2>
-        </div>
-            <br> 
-        <div class="sobre-text">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Dolorem, facilis corrupti autem perspiciatis
-            alias ad voluptates et saepe inventore perferendis 
-            animi exercitationem earum. Quasi nam, eius cupiditate 
-            enim neque totam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Dolorem, facilis corrupti autem perspiciatis alias ad 
-            voluptates et saepe inventore perferendis animi 
-            exercitationem earum. Quasi nam, eius cupiditate 
-            enim neque totam.
-            </p>
-            <br><br>
-        </div>
-    </section>
+
+<!--gráfico-->
+<div id="chartdiv"></div>
+
+<!--separação do corpo-->
+<style>
+    #chartdiv{
+        width: 100%;
+        height: 400px;
+        font-family: "Ubuntu";
+        font-weight: 500;
+        margin-top: 1.5%;
+    }
+</style>
+<script>
+    am4core.ready(function() {
+    
+    // Themes begin
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+    
+    var chart = am4core.create("chartdiv", am4charts.PieChart3D);
+    chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+    
+    chart.legend = new am4charts.Legend();
+    
+    chart.data = [
+      {
+        linguagens: "HTML",
+        conhecimento: 70
+      },
+      {
+        linguagens: "CSS",
+        conhecimento: 70
+      },
+      {
+        linguagens: "JS",
+        conhecimento: 50
+      },
+      {
+        linguagens: "C",
+        conhecimento: 50
+      },
+      {
+        linguagens: "JAVA",
+        conhecimento: 50
+      },
+      {
+        linguagens: "PYTHON",
+        conhecimento: 30
+      },
+      {
+        linguagens: "ILLUSTRATOR",
+        conhecimento: 50
+      },
+      {
+        linguagens: "SQL",
+        conhecimento: 50
+      }
+    ];
+    
+    var series = chart.series.push(new am4charts.PieSeries3D());
+    series.dataFields.value = "conhecimento";
+    series.dataFields.category = "linguagens";
+    
+    }); // end am4core.ready()
+    </script>
+    
+    
+
+
+
+
+    
 <div class="parallax2"></div>
 </div>
 
