@@ -315,8 +315,8 @@ header{
     top: 110%;
     bottom: 20%;
 }
-.chartdiv{
-    color: #fff;
+.piechart{
+    background-color: rgb(75, 75, 75);
 }
 .sessao-conhecimento h1{
     text-align: center;

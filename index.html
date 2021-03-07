@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <!--Arquivos de instalação dos gráficos-->
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <!--Arquivos de instalação dos gráficos-->
+
     <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
-    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
-    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    
     
     <title>Portfólio</title>
 </head>
@@ -102,74 +106,32 @@
 
 
 <!--gráfico-->
-<div id="chartdiv"></div>
-
-<!--separação do corpo-->
-<style>
-    #chartdiv{
-        width: 100%;
-        height: 400px;
-        font-family: "Ubuntu";
-        font-weight: 500;
-        margin-top: 1.5%;
-    }
-</style>
+<div id="chart"></div>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
-    am4core.ready(function() {
-    
-    // Themes begin
-    am4core.useTheme(am4themes_animated);
-    // Themes end
-    
-    var chart = am4core.create("chartdiv", am4charts.PieChart3D);
-    chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
-    
-    chart.legend = new am4charts.Legend();
-    
-    chart.data = [
-      {
-        linguagens: "HTML",
-        conhecimento: 70
-      },
-      {
-        linguagens: "CSS",
-        conhecimento: 70
-      },
-      {
-        linguagens: "JS",
-        conhecimento: 50
-      },
-      {
-        linguagens: "C",
-        conhecimento: 50
-      },
-      {
-        linguagens: "JAVA",
-        conhecimento: 50
-      },
-      {
-        linguagens: "PYTHON",
-        conhecimento: 30
-      },
-      {
-        linguagens: "ILLUSTRATOR",
-        conhecimento: 50
-      },
-      {
-        linguagens: "SQL",
-        conhecimento: 50
-      }
-    ];
-    
-    var series = chart.series.push(new am4charts.PieSeries3D());
-    series.dataFields.value = "conhecimento";
-    series.dataFields.category = "linguagens";
-    
-    }); // end am4core.ready()
-    </script>
-    
-    
+  google.charts.load('current', {packages: ['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+  
 
+  function drawChart(){
+      const container = document.querySelector('#chart')
+      const data = new google.visualization.arrayToDataTable([
+          [ 'linguagens', 'porcentagem' ],
+          [ 'HTML', 60 ],
+          [ 'CSS', 60 ],
+          [ 'JS', 50 ],
+          [ 'C', 50 ],
+          [ 'JAVA', 40 ],
+          [ 'SQL', 50 ],
+          [ 'ILLUSTRATOR', 60 ]
+      ])
+      var options = {'title':'How Much Pizza I Ate Last Night',
+                     'width':400,
+                     'height':300};
+      const chart = new google.visualization.PieChart(container)
+      chart.draw(data)
+  }
+</script>
 
 
 
