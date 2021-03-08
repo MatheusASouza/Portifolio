@@ -117,17 +117,19 @@
       const container = document.querySelector('#chart')
       const data = new google.visualization.arrayToDataTable([
           [ 'linguagens', 'porcentagem' ],
-          [ 'HTML', 60 ],
-          [ 'CSS', 60 ],
-          [ 'JS', 50 ],
-          [ 'C', 50 ],
-          [ 'JAVA', 40 ],
-          [ 'SQL', 50 ],
-          [ 'ILLUSTRATOR', 60 ]
+          [ 'HTML', 21.28 ],
+          [ 'CSS', 13.28 ],
+          [ 'JS', 18.28 ],
+          [ 'C', 10.28 ],
+          [ 'JAVA', 10.28 ],
+          [ 'SQL', 12.28 ],
+          [ 'ILLUSTRATOR', 14.28 ]
       ])
       var options = {'title':'How Much Pizza I Ate Last Night',
                      'width':400,
-                     'height':300};
+                     'height':300,
+                     
+                    };
       const chart = new google.visualization.PieChart(container)
       chart.draw(data)
   }
