@@ -102,10 +102,9 @@
         <li>Aplicações em Python.</li> <br>
         <br><br>
     </div>
-</section>
 
 
-<!--gráfico-->
+    <!--gráfico-->
 <div id="chart"></div>
 <script src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
@@ -115,30 +114,65 @@
 
   function drawChart(){
       const container = document.querySelector('#chart')
-      const data = new google.visualization.arrayToDataTable([
+      const data = new google.visualization.arrayToDataTable
+      ([
           [ 'linguagens', 'porcentagem' ],
-          [ 'HTML', 21.28 ],
-          [ 'CSS', 13.28 ],
-          [ 'JS', 18.28 ],
-          [ 'C', 10.28 ],
-          [ 'JAVA', 10.28 ],
-          [ 'SQL', 12.28 ],
-          [ 'ILLUSTRATOR', 14.28 ]
+          [ 'HTML', 21 ],
+          [ 'CSS', 16 ],
+          [ 'JS', 16 ],
+          [ 'C', 16 ],
+          [ 'JAVA', 10 ],
+          [ 'SQL', 12 ],          
       ])
-      var options = {'title':'How Much Pizza I Ate Last Night',
-                     'width':400,
-                     'height':300,
-                     
-                    };
+      
+  
+      const options = 
+    {
+        width: 800,
+        height: 640,
+        fontsize: 500,
+        title: 'Gráfico de conhecimentos',
+        titleColor: 'rgb(255, 255, 255)',
+        sizeText: '300',
+        backgroundColor: 'rgb(68, 68, 68)',
+        is3D: true,
+        colors: ['#00008B', '#0000CD', '#6495ED', '#4169E1', '#1E90FF', '#00BFFF' ],
+    };
+    
       const chart = new google.visualization.PieChart(container)
-      chart.draw(data)
+      chart.draw(data, options);
   }
-</script>
+  
+  
+</script> 
+</section>
+
+
+
+
 
 
 
     
 <div class="parallax2"></div>
+
+<footer>
+    <div class="footer-content">
+        <p>
+            Copyright &copy; 2021, MATHEUS ALVES - Todos os direitos reservados
+        </p>
+        <div class="social-list">
+        <ul></ul>
+            <li><a href=""><i class="fab fa-github-alt"></i></a></li>
+            <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+        </ul>
+        </div>
+
+    </div>
+
+
+</footer>
 </div>
 
     
