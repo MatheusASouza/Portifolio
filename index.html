@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+
     <!--Arquivos de instalação dos gráficos-->
 <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
 <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
@@ -40,7 +41,7 @@
 <img src="imagens/logomatheus.png" alt="">
                         
                         
-<btn-one>Saiba mais</btn-one>
+<btn-one a href="#sessao-sobre" class="butom">Saiba mais</a></btn-one>
 </div>     
 </header>
 
@@ -48,8 +49,8 @@
 <aside class="sidebar">
 <nav>
     <ul class="menu">
-        <li class="menu-item"><a href="#" class="menu-link">Início</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">Conhecimentos</a></li>
+        <li class="menu-item"><a href="#sessao-sobre" class="menu-link">Início</a></li>
+        <li class="menu-item"><a href="#sessao-conhecimento" class="menu-link">Conhecimentos</a></li>
         <li class="menu-item"><a href="#" class="menu-link">Projetos</a></li>
         <li class="menu-item"><a href="#" class="menu-link">Contato</a></li>
     </ul>
@@ -62,21 +63,22 @@
 </aside>
 
 <div class="foto-sobre">
-    <img src="imagens/photo.jpg">
+    <img src="imagens/theus.png">
 </div>
 
-<section class="sessao-sobre">
+<div class="foto-fundo">    
+    <img src="imagens/fundo.png">
+</div>
+
+<section id="sessao-sobre">
     <div class="sessao-header">
         <h1>Sobre</h1>
         <h2></h2>
     </div>
         <br> 
     <div class="sobre-text">
-        <p>Olá, meu nome é Matheus e sou desenvolvedor web front-end. Procuro estar sempre a par das novidades para criar interfaces intuitivas, fluídas e dinâmicas focadas na usabilidade e no design responsivo. <br>
+        <p> Olá, meu nome é Matheus e sou desenvolvedor web front-end. Procuro estar sempre a par das novidades para criar interfaces intuitivas, fluídas e dinâmicas focadas na usabilidade e no design responsivo. <br>
             Sou um desenvolvedor freelancer e estudante que está entrando no mercado em busca de inovação e aprendizado. <br><br>
-            
-             
-            
             Conheça um pouco mais das minhas habilidades e projetos! 
         </p>
         <br><br>
@@ -88,19 +90,29 @@
 </div>
     
 
-<section class="sessao-conhecimento">
+<section id="sessao-conhecimento">
     <div class="sessao-header">
-        <h1>Conhecimento</h1>
+        <div class="foto-fundo2">    
+            <img src="imagens/fundo2.png">
+            
+        </div>
+        <h1>Conhecimentos</h1>
         <h2></h2>
     </div>
         <br> 
-    <div class="conhecimento-text">
-        <li>Programação web front-end, utilizando ferramentas como HTML, CSS e JavaScript.</li> <br>
-        <li>Habilidades básicas de web design com ferramentas como Corel Draw e Adobe Illustrator.</li> <br>
-        <li>Banco de dados SQL utilizando MySQL e SQL Server.</li> <br>
-        <li>Aplicações em C e JAVA.</li> <br>
-        <li>Aplicações em Python.</li> <br>
-        <br><br>
+        <div class="imagens-conhecimentos1">
+            <img src="imagens/html-5.png">
+            <img src="imagens/css.png">
+            <img src="imagens/javascript.png">
+            <img src="imagens/c.png">
+        </div>
+
+        <div class="imagens-conhecimentos2">
+            <img src="imagens/java.png">
+            <img src="imagens/sql-server.png">
+            <img src="imagens/python.png">
+        </div>
+
     </div>
 
 
@@ -115,59 +127,67 @@
   function drawChart(){
       const container = document.querySelector('#chart')
       const data = new google.visualization.arrayToDataTable
-      ([
+      ([  
           [ 'linguagens', 'porcentagem' ],
           [ 'HTML', 21 ],
           [ 'CSS', 16 ],
           [ 'JS', 16 ],
           [ 'C', 16 ],
           [ 'JAVA', 10 ],
-          [ 'SQL', 12 ],          
+          [ 'SQL', 12 ],
+          [ 'PYTHON', 8 ]         
       ])
-      
   
       const options = 
     {
-        width: 800,
-        height: 640,
-        fontsize: 500,
+        width: 1150,
+        height: 980,
+        fontSize: 28,
+        fontFamily: 'Ubuntu',
         title: 'Gráfico de conhecimentos',
         titleColor: 'rgb(255, 255, 255)',
+        legend: {textStyle: {color: '#fff'}},
         sizeText: '300',
-        backgroundColor: 'rgb(68, 68, 68)',
+        textStyle:{color:'rgb(255, 255, 255)'},
+        backgroundColor: 'rgb(41, 41, 41)',
         is3D: true,
-        colors: ['#00008B', '#0000CD', '#6495ED', '#4169E1', '#1E90FF', '#00BFFF' ],
+        colors: ['#00008B', '#0000CD', '#4169E1', '#1E90FF', '#00BFFF', '#6495ED', '#87CEEB' ]
     };
-    
+     
       const chart = new google.visualization.PieChart(container)
       chart.draw(data, options);
   }
-  
-  
+
 </script> 
 </section>
-
-
-
-
-
-
-
     
 <div class="parallax2"></div>
+
+<section id="sessao-projetos">
+    <div class="sessao-header">
+        <div class="foto-fundo3">    
+            <img src="imagens/fundo3.png">
+        </div>
+        <h1>Projetos</h1>
+        <h2></h2>
+        </div>
+
+    <div class="projetos-text">
+        <p>      
+        </p>
+        <br><br>
+    </div>
+        <br> 
+</section>
+
+<div class="parallax3"></div>
 
 <footer>
     <div class="footer-content">
         <p>
             Copyright &copy; 2021, MATHEUS ALVES - Todos os direitos reservados
         </p>
-        <div class="social-list">
-        <ul></ul>
-            <li><a href=""><i class="fab fa-github-alt"></i></a></li>
-            <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-            <li><a href=""><i class="fab fa-instagram"></i></a></li>
-        </ul>
-        </div>
+        
 
     </div>
 
