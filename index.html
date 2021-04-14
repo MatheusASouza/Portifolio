@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-
-    <!--Arquivos de instalação dos gráficos-->
-<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
-<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
-<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
-    <!--Arquivos de instalação dos gráficos-->
 
     <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
@@ -22,58 +17,40 @@
     
     <title>Portfólio</title>
 </head>
+
 <body>
-    <input id="menu-hamburguer" type="checkbox">
-    <label for="menu-hamburguer">
-        <div class="menu-btm">
-            <span class="hamburguer"></span>
+   
 
+
+    <header>
+        <nav id ="menu">
+            <ul>
+                <li><a href="#sessao-sobre">Sobre</a></li>
+                <li><a href="#sessao-conhecimento">Conhecimentos</a></li>
+                <li><a href="#sessao-projetos">Projetos</a></li>
+                <li><a href="#">Contatos</a></li>
+                <li><a href="#">Currículo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<section id="main-banner">
+
+    <div class="banner">
+        <h1>matheus alves</h1>
     </div>
-    </label>
-    
 
-<header>
-<div class="img-wrapper">
-<img src="imagens/bg2.jpg" alt="">
-                
-</div>
-<div class="banner">
-<img src="imagens/logomatheus.png" alt="">
-                        
-                        
-<btn-one a href="#sessao-sobre" class="butom">Saiba mais</a></btn-one>
-</div>     
-</header>
+</section>
 
 
-<aside class="sidebar">
-<nav>
-    <ul class="menu">
-        <li class="menu-item"><a href="#sessao-sobre" class="menu-link">Início</a></li>
-        <li class="menu-item"><a href="#sessao-conhecimento" class="menu-link">Conhecimentos</a></li>
-        <li class="menu-item"><a href="#sessao-projetos" class="menu-link">Projetos</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">Contato</a></li>
-    </ul>
-</nav>
-    <div class="social-midia">
-        <a href=""><i class="fab fa-github-alt"></i></a>
-        <a href=""><i class="fab fa-linkedin-in"></i></a>
-        <a href=""><i class="fab fa-instagram"></i></a>
-    </div>
-</aside>
-
-<div class="foto-sobre">
+<section  class="foto-sobre">
     <img src="imagens/theus.png">
-</div>
+</section>
 
-<div class="foto-fundo">    
-    <img src="imagens/fundo.png">
-</div>
 
 <section id="sessao-sobre">
     <div class="sessao-header">
         <h1>Sobre</h1>
-        <h2></h2>
     </div>
         <br> 
     <div class="sobre-text">
@@ -81,95 +58,36 @@
             Sou um desenvolvedor freelancer e estudante que está entrando no mercado em busca de inovação e aprendizado. <br><br>
             Conheça um pouco mais das minhas habilidades e projetos! 
         </p>
-        <br><br>
+        
     </div>
 </section>
       
 <div class="parallax">
     
 </div>
-    
 
 <section id="sessao-conhecimento">
     <div class="sessao-header">
-        <div class="foto-fundo2">    
-            <img src="imagens/fundo2.png">
-            
-        </div>
+        
         <h1>Conhecimentos</h1>
-        <h2></h2>
-    </div>
-        <br> 
-        <div class="imagens-conhecimentos1">
-            <img src="imagens/html-5.png">
-            <img src="imagens/css.png">
-            <img src="imagens/javascript.png">
-            <img src="imagens/c.png">
+            <h2>html</h2>
+            <h2>css</h2>
+            <h2>javascript</h2>
+            <h2>c</h2>
+            <h2>java</h2>
+            <h2>python</h2>
+            <h2>sql</h2>
+            <h2>php</h2>
+            <h2>github</h2>
+
         </div>
-
-        <div class="imagens-conhecimentos2">
-            <img src="imagens/java.png">
-            <img src="imagens/sql-server.png">
-            <img src="imagens/python.png">
-        </div>
-
-    </div>
-
-
-    <!--gráfico-->
-<div id="chart"></div>
-<script src="https://www.gstatic.com/charts/loader.js"></script>
-<script>
-  google.charts.load('current', {packages: ['corechart']});
-  google.charts.setOnLoadCallback(drawChart);
-  
-
-  function drawChart(){
-      const container = document.querySelector('#chart')
-      const data = new google.visualization.arrayToDataTable
-      ([  
-          [ 'linguagens', 'porcentagem' ],
-          [ 'HTML', 21 ],
-          [ 'CSS', 16 ],
-          [ 'JS', 16 ],
-          [ 'C', 16 ],
-          [ 'JAVA', 10 ],
-          [ 'SQL', 12 ],
-          [ 'PYTHON', 8 ]         
-      ])
-  
-      const options = 
-    {
-        width: 1150,
-        height: 980,
-        fontSize: 28,
-        fontFamily: 'Ubuntu',
-        title: 'Gráfico de conhecimentos',
-        titleColor: 'rgb(255, 255, 255)',
-        legend: {textStyle: {color: '#fff'}},
-        sizeText: '300',
-        textStyle:{color:'rgb(255, 255, 255)'},
-        backgroundColor: 'rgb(41, 41, 41)',
-        is3D: true,
-        colors: ['#00008B', '#0000CD', '#4169E1', '#1E90FF', '#00BFFF', '#6495ED', '#87CEEB' ]
-    };
-     
-      const chart = new google.visualization.PieChart(container)
-      chart.draw(data, options);
-  }
-
-</script> 
 </section>
     
 <div class="parallax2"></div>
 
 <section id="sessao-projetos">
     <div class="sessao-header">
-
-        <div class="foto-fundo3">    
-            <img src="imagens/fundo3.png">
-        </div>
-            <h1>Projetos</h1>
+        <h1>Projetos</h1>
     </div>
 </section>
 
@@ -178,7 +96,7 @@
     <div id="carrossel">
         <div class="itens-carrossel"><img src="imagens/protótipo-countdown.png"/></div>
         <div class="itens-carrossel"><img src="imagens/imagem1-parallax.jpg"/></div>
-        
+    </div>
 </section>
 
 <div class="parallax3">
